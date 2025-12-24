@@ -26,15 +26,17 @@
         <span class="lock-icon">🔒</span>
         <div>
           <h2>Palabras secretas</h2>
-          <p>Completa las cuatro palabras cuando las descubras con las preguntas.</p>
+          <p>Completa las cuatro palabras cuando las descubras.</p>
         </div>
       </div>
       <div class="lock-inputs">
-        <input type="text" maxlength="12" name="word1" placeholder="Palabra 1">
-        <input type="text" maxlength="12" name="word2" placeholder="Palabra 2">
-        <input type="text" maxlength="12" name="word3" placeholder="Palabra 3">
-        <input type="text" maxlength="12" name="word4" placeholder="Palabra 4">
+        <input type="text" maxlength="12" class="word-input" placeholder="Palabra 1">
+        <input type="text" maxlength="12" class="word-input" placeholder="Palabra 2">
+        <input type="text" maxlength="12" class="word-input" placeholder="Palabra 3">
+        <input type="text" maxlength="12" class="word-input" placeholder="Palabra 4">
       </div>
+      <button id="verify-words-button" class="btn-verify">Abrir Carta Mágica</button>
+      <div id="words-message" class="message-status"></div>
     </div>
   </header>
 
@@ -48,7 +50,7 @@
       <article class="hero-card" id="hero-card">
         <div>
           <h3>Una carta para comenzar</h3>
-          <p>Bienvenida/o al bosque jurásico. Aquí guardaremos recuerdos, pistas y sorpresas. Al final, las palabras secretas abrirán la carta especial.</p>
+          <p>Bienvenida/o al bosque jurásico. Al final, las palabras secretas abrirán la carta especial.</p>
         </div>
         <div class="hero-badge">
           <span>🌿</span>
@@ -59,47 +61,41 @@
       <section class="dino-section" aria-labelledby="dino-title">
         <div class="section-header left">
           <h2 id="dino-title">Escoge un dinosaurio</h2>
-          <p>Haz clic para revelar su pregunta y bajar automáticamente.</p>
         </div>
         <div class="dino-grid">
           <button class="dino-card" data-dino="triceratops" type="button">
             <span class="dino-emoji">🦕</span>
-            <div>
-              <h3>Triceratops</h3>
-              <p>Guardián del valle verde</p>
-            </div>
+            <div><h3>Triceratops</h3></div>
           </button>
           <button class="dino-card" data-dino="raptor" type="button">
             <span class="dino-emoji">🦖</span>
-            <div>
-              <h3>Velociraptor</h3>
-              <p>Explorador veloz de la jungla</p>
-            </div>
+            <div><h3>Velociraptor</h3></div>
           </button>
           <button class="dino-card" data-dino="stego" type="button">
             <span class="dino-emoji">🦕</span>
-            <div>
-              <h3>Stegosaurus</h3>
-              <p>Amigo de las hojas gigantes</p>
-            </div>
+            <div><h3>Stegosaurus</h3></div>
           </button>
           <button class="dino-card" data-dino="brachio" type="button">
             <span class="dino-emoji">🦕</span>
-            <div>
-              <h3>Brachiosaurus</h3>
-              <p>El más alto del bosque</p>
-            </div>
+            <div><h3>Brachiosaurus</h3></div>
           </button>
         </div>
       </section>
 
       <section class="question-section" id="question-section">
         <article class="question-card" id="question-card">
-          <div class="question-image" id="question-image">🦕</div>
-          <div>
+          <div class="question-image" id="question-image">❓</div>
+          <div class="question-content">
             <h3 id="question-title">Selecciona un dinosaurio</h3>
-            <p id="question-text">Al tocar cada dinosaurio aparecerá su pregunta aquí.</p>
-            <div class="question-meta" id="question-meta">Estado: <span>Lista para jugar</span></div>
+            <p id="question-text">Toca un dinosaurio arriba para ver su reto.</p>
+            
+            <div id="answer-area" style="margin-top: 15px;">
+                <input type="text" id="answer-input" placeholder="Escribe tu respuesta aquí...">
+                <button id="check-answer-button">Comprobar</button>
+                <div id="answer-message" class="message-status"></div>
+            </div>
+
+            <div class="question-meta" id="question-meta">Estado: <span>Esperando...</span></div>
           </div>
         </article>
       </section>
