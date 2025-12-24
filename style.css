@@ -1,0 +1,310 @@
+:root {
+  color-scheme: light;
+  --green-900: #0f3b2c;
+  --green-800: #14523b;
+  --green-700: #1f6b4b;
+  --green-500: #37a46b;
+  --green-200: #cfead8;
+  --cream: #f6f9f2;
+  --shadow: 0 20px 50px rgba(15, 59, 44, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background: var(--cream);
+  color: var(--green-900);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.ambient-bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(63, 175, 114, 0.25), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgba(63, 175, 114, 0.2), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(15, 59, 44, 0.15), transparent 55%);
+  z-index: -1;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem clamp(1.5rem, 4vw, 4rem) 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand-icon {
+  font-size: 2.8rem;
+  background: rgba(31, 107, 75, 0.12);
+  border-radius: 1.5rem;
+  padding: 0.9rem 1.1rem;
+}
+
+.brand-eyebrow {
+  font-size: 0.95rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--green-700);
+  margin-bottom: 0.25rem;
+}
+
+.brand h1 {
+  font-family: "Itim", cursive;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.lock-panel {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1.4rem;
+}
+
+.lock-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.lock-icon {
+  font-size: 2rem;
+}
+
+.lock-title h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.lock-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.lock-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.lock-inputs input {
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(20, 82, 59, 0.2);
+  font-size: 0.95rem;
+}
+
+.lock-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+main {
+  padding: 0 clamp(1.5rem, 4vw, 4rem) 4rem;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.section-header h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-header.left {
+  max-width: none;
+}
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card,
+.hero-card,
+.question-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+}
+
+.card-subtitle {
+  color: rgba(15, 59, 44, 0.6);
+  margin-bottom: 1.2rem;
+}
+
+.stack-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.stack-form label {
+  font-weight: 600;
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.stack-form input {
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(20, 82, 59, 0.2);
+  font-size: 0.95rem;
+}
+
+.secret-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--green-700);
+  color: white;
+  box-shadow: 0 10px 20px rgba(20, 82, 59, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--green-700);
+  border: 1px dashed rgba(20, 82, 59, 0.4);
+}
+
+.form-message {
+  font-size: 0.95rem;
+  color: var(--green-700);
+}
+
+.hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(31, 107, 75, 0.15);
+}
+
+.hero-badge {
+  background: rgba(55, 164, 107, 0.1);
+  border-radius: 1.2rem;
+  padding: 1rem 1.4rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--green-700);
+}
+
+.hero-badge span {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.dino-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.dino-card {
+  border: none;
+  text-align: left;
+  background: white;
+  padding: 1.3rem;
+  border-radius: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dino-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(15, 59, 44, 0.2);
+}
+
+.dino-emoji {
+  font-size: 2rem;
+}
+
+.question-section {
+  margin-bottom: 2rem;
+}
+
+.question-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.question-image {
+  font-size: 3rem;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(31, 107, 75, 0.12);
+  display: grid;
+  place-items: center;
+}
+
+.question-meta {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: var(--green-700);
+}
+
+.is-locked {
+  opacity: 0.55;
+  pointer-events: none;
+  filter: grayscale(0.4);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .hero-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .question-card {
+    grid-template-columns: 1fr;
+  }
+}
