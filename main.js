@@ -17,37 +17,41 @@ const verifyWordsButton = document.getElementById("verify-words-button");
 const wordsMessage = document.getElementById("words-message");
 
 const dinos = {
-  triceratops: {
-    name: "Triceratops",
-    emoji: "🦕",
-    question: "¿Qué recuerdo te hace sentir tan fuerte como sus tres cuernos?",
-    answer: "familia",
-  },
-  raptor: {
-    name: "Velociraptor",
+  albertosaurus: {
+    name: "Albertosaurus",
     emoji: "🦖",
-    question: "¿Qué pista rápida puedes descubrir para seguir la aventura?",
-    answer: "huella",
+    question: "¿Este dinosaurio era carnívoro o herbívoro?",
+    answer: "carnívoro",
   },
-  stego: {
-    name: "Stegosaurus",
+  nigersaurus: {
+    name: "Nigersaurus",
     emoji: "🦕",
-    question: "¿Qué detalle especial esconderías bajo sus placas?",
-    answer: "estrella",
+    question: "¿Cuántos dientes tenía este dinosaurio aproximadamente?",
+    answer: "500",
   },
-  brachio: {
-    name: "Brachiosaurus",
+  diplodocus: {
+    name: "Diplodocus",
     emoji: "🦕",
-    question: "¿Cuál es la meta más alta que quieres alcanzar hoy?",
-    answer: "sueño",
+    question: "¿Era el Diplodocus más largo que dos autobuses de forma horizontal?",
+    answer: "sí",
+  },
+  titanosaurus: {
+    name: "Titanosaurus",
+    emoji: "🦕",
+    question: "¿De qué época fueron los Titanosaurus?",
+    answer: "cretácico",
   },
 };
 
-const secretWords = ["familia", "huella", "estrella", "sueño"];
+const secretWords = ["carnivoro", "500", "si", "cretacico"];
 let activeDinoKey = null;
 
 // Normalizar texto (quitar espacios y pasar a minúsculas)
-const normalize = (value) => value.trim().toLowerCase();
+const normalize = (value) => value
+  .trim()
+  .toLowerCase()
+  .normalize("NFD")
+  .replace(/\p{Diacritic}/gu, "");
 
 const setStatusMessage = (element, message, status) => {
   element.textContent = message;
@@ -94,7 +98,8 @@ checkAnswerButton.addEventListener("click", () => {
   }
 
   if (response === expected) {
-    setStatusMessage(answerMessage, `¡Correcto! La palabra secreta es: ${expected.toUpperCase()}`, "success");
+    const displayAnswer = dinos[activeDinoKey].answer.toUpperCase();
+    setStatusMessage(answerMessage, `¡Correcto! La palabra secreta es: ${displayAnswer}`, "success");
   } else {
     setStatusMessage(answerMessage, "Respuesta incorrecta. Intenta de nuevo.", "error");
   }
