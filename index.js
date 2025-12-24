@@ -1,8 +1,8 @@
 const loginForm = document.getElementById("login-form");
 const loginMessage = document.getElementById("login-message");
 
-const ALLOWED_USER = "navidad";
-const ALLOWED_PASS = "dino2024";
+const ALLOWED_USER = "Ali";
+const ALLOWED_PASS = "1234";
 
 const setMessage = (message, isError = false) => {
   loginMessage.textContent = message;

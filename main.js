@@ -4,17 +4,6 @@ const questionTitle = document.getElementById("question-title");
 const questionText = document.getElementById("question-text");
 const questionImage = document.getElementById("question-image");
 const questionMeta = document.getElementById("question-meta");
-const answerInput = document.getElementById("answer-input");
-const checkAnswerButton = document.getElementById("check-answer");
-const answerMessage = document.getElementById("answer-message");
-const verifyWordsButton = document.getElementById("verify-words");
-const wordsMessage = document.getElementById("words-message");
-const wordInputs = [
-  document.querySelector('input[name="word1"]'),
-  document.querySelector('input[name="word2"]'),
-  document.querySelector('input[name="word3"]'),
-  document.querySelector('input[name="word4"]'),
-];
 
 const dinos = {
   triceratops: {
