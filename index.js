@@ -1,5 +1,7 @@
 const loginForm = document.getElementById("login-form");
 const loginMessage = document.getElementById("login-message");
+const passwordInput = document.getElementById("login-pass");
+const togglePasswordButton = document.getElementById("toggle-password");
 
 const ALLOWED_USER = "Ali";
 const ALLOWED_PASS = "pato2005";
@@ -22,4 +24,14 @@ loginForm.addEventListener("submit", (event) => {
   }
 
   setMessage("Usuario o contraseña incorrectos.", true);
+});
+
+togglePasswordButton.addEventListener("click", () => {
+  const isHidden = passwordInput.type === "password";
+  passwordInput.type = isHidden ? "text" : "password";
+  togglePasswordButton.setAttribute("aria-pressed", String(isHidden));
+  togglePasswordButton.setAttribute(
+    "aria-label",
+    isHidden ? "Ocultar contraseña" : "Mostrar contraseña"
+  );
 });
