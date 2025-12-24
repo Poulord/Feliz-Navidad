@@ -2,7 +2,7 @@ const loginForm = document.getElementById("login-form");
 const loginMessage = document.getElementById("login-message");
 
 const ALLOWED_USER = "Ali";
-const ALLOWED_PASS = "1234";
+const ALLOWED_PASS = "pato2005";
 
 const setMessage = (message, isError = false) => {
   loginMessage.textContent = message;
