@@ -24,25 +24,25 @@ const questionImage = document.getElementById("question-image");
 const questionMeta = document.getElementById("question-meta");
 
 const dinos = {
-  triceratops: {
-    name: "Triceratops",
-    emoji: "🦕",
-    question: "¿Qué recuerdo te hace sentir tan fuerte como sus tres cuernos?",
-  },
-  raptor: {
-    name: "Velociraptor",
+  albertosaurus: {
+    name: "Albertosaurus",
     emoji: "🦖",
-    question: "¿Qué pista rápida puedes descubrir para seguir la aventura?",
+    question: "¿Este dinosaurio era carnívoro o herbívoro?",
   },
-  stego: {
-    name: "Stegosaurus",
+  nigersaurus: {
+    name: "Nigersaurus",
     emoji: "🦕",
-    question: "¿Qué detalle especial esconderías bajo sus placas?",
+    question: "¿Cuántos dientes tenía este dinosaurio aproximadamente?",
   },
-  brachio: {
-    name: "Brachiosaurus",
+  diplodocus: {
+    name: "Diplodocus",
     emoji: "🦕",
-    question: "¿Cuál es la meta más alta que quieres alcanzar hoy?",
+    question: "¿Era el Diplodocus más largo que dos autobuses de forma horizontal?",
+  },
+  titanosaurus: {
+    name: "Titanosaurus",
+    emoji: "🦕",
+    question: "¿De qué época fueron los Titanosaurus?",
   },
 };
 
