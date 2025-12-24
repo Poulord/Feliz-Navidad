@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Navidad · Aventuras Jurásicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-bg" aria-hidden="true"></div>
+
+  <header class="site-header main-header">
+    <div class="brand">
+      <span class="brand-icon">🦕</span>
+      <div>
+        <p class="brand-eyebrow">Feliz Navidad</p>
+        <h1>Aventuras Jurásicas</h1>
+      </div>
+    </div>
+
+    <div class="lock-panel">
+      <div class="lock-title">
+        <span class="lock-icon">🔒</span>
+        <div>
+          <h2>Palabras secretas</h2>
+          <p>Completa las cuatro palabras cuando las descubras con las preguntas.</p>
+        </div>
+      </div>
+      <div class="lock-inputs">
+        <input type="text" maxlength="12" name="word1" placeholder="Palabra 1">
+        <input type="text" maxlength="12" name="word2" placeholder="Palabra 2">
+        <input type="text" maxlength="12" name="word3" placeholder="Palabra 3">
+        <input type="text" maxlength="12" name="word4" placeholder="Palabra 4">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="main-section">
+      <div class="section-header">
+        <h2>Zona principal</h2>
+        <p>Explora los dinosaurios y responde a las preguntas para descubrir las pistas.</p>
+      </div>
+
+      <article class="hero-card" id="hero-card">
+        <div>
+          <h3>Una carta para comenzar</h3>
+          <p>Bienvenida/o al bosque jurásico. Aquí guardaremos recuerdos, pistas y sorpresas. Al final, las palabras secretas abrirán la carta especial.</p>
+        </div>
+        <div class="hero-badge">
+          <span>🌿</span>
+          <p>Exploración activa</p>
+        </div>
+      </article>
+
+      <section class="dino-section" aria-labelledby="dino-title">
+        <div class="section-header left">
+          <h2 id="dino-title">Escoge un dinosaurio</h2>
+          <p>Haz clic para revelar su pregunta y bajar automáticamente.</p>
+        </div>
+        <div class="dino-grid">
+          <button class="dino-card" data-dino="triceratops" type="button">
+            <span class="dino-emoji">🦕</span>
+            <div>
+              <h3>Triceratops</h3>
+              <p>Guardián del valle verde</p>
+            </div>
+          </button>
+          <button class="dino-card" data-dino="raptor" type="button">
+            <span class="dino-emoji">🦖</span>
+            <div>
+              <h3>Velociraptor</h3>
+              <p>Explorador veloz de la jungla</p>
+            </div>
+          </button>
+          <button class="dino-card" data-dino="stego" type="button">
+            <span class="dino-emoji">🦕</span>
+            <div>
+              <h3>Stegosaurus</h3>
+              <p>Amigo de las hojas gigantes</p>
+            </div>
+          </button>
+          <button class="dino-card" data-dino="brachio" type="button">
+            <span class="dino-emoji">🦕</span>
+            <div>
+              <h3>Brachiosaurus</h3>
+              <p>El más alto del bosque</p>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section class="question-section" id="question-section">
+        <article class="question-card" id="question-card">
+          <div class="question-image" id="question-image">🦕</div>
+          <div>
+            <h3 id="question-title">Selecciona un dinosaurio</h3>
+            <p id="question-text">Al tocar cada dinosaurio aparecerá su pregunta aquí.</p>
+            <div class="question-meta" id="question-meta">Estado: <span>Lista para jugar</span></div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
