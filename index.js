@@ -4,7 +4,7 @@ const passwordInput = document.getElementById("login-pass");
 const togglePasswordButton = document.getElementById("toggle-password");
 
 const ALLOWED_USER = "Ali";
-const ALLOWED_PASS = "pato2005";
+const ALLOWED_PASS = "1234";
 
 const setMessage = (message, isError = false) => {
   loginMessage.textContent = message;
