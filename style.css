@@ -434,3 +434,125 @@ main {
     align-items: flex-start;
   }
 }
+
+
+
+
+
+
+
+/* ========== Carta (estilo propio) ========== */
+.carta-card--letter {
+  position: relative;
+  border: 1px solid rgba(31, 107, 75, 0.12);
+  overflow: hidden;
+}
+
+.carta-card--letter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 5%, rgba(55, 164, 107, 0.10), transparent 45%),
+    radial-gradient(circle at 95% 15%, rgba(15, 59, 44, 0.08), transparent 55%),
+    linear-gradient(180deg, rgba(246, 249, 242, 0.7), transparent 55%);
+  pointer-events: none;
+}
+
+.carta-head,
+.carta-body,
+.carta-foot {
+  position: relative; /* para estar por encima del ::before */
+}
+
+.carta-head {
+  margin-bottom: 1.25rem;
+}
+
+.carta-subtitle {
+  margin-top: 0.25rem;
+  color: rgba(15, 59, 44, 0.65);
+  font-weight: 600;
+}
+
+.carta-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(31, 107, 75, 0.25),
+    rgba(55, 164, 107, 0.35),
+    rgba(31, 107, 75, 0.25),
+    transparent
+  );
+  margin: 1.25rem 0 1.6rem;
+}
+
+.carta-divider--soft {
+  margin: 1.6rem 0 1.1rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(31, 107, 75, 0.18),
+    transparent
+  );
+}
+
+.carta-body {
+  display: grid;
+  gap: 1rem;
+  font-size: 1.02rem;
+}
+
+.carta-body p {
+  margin: 0;
+}
+
+.carta-body p strong {
+  color: var(--green-800);
+}
+
+.carta-callout {
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.25rem;
+  background: rgba(55, 164, 107, 0.08);
+  border: 1px solid rgba(31, 107, 75, 0.16);
+  box-shadow: 0 14px 30px rgba(15, 59, 44, 0.08);
+}
+
+.carta-callout p + p {
+  margin-top: 0.85rem;
+}
+
+.carta-foot {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.carta-signoff {
+  color: rgba(15, 59, 44, 0.65);
+  font-weight: 600;
+}
+
+.carta-signature {
+  font-family: "Itim", cursive;
+  font-size: 1.4rem;
+  color: var(--green-800);
+}
+
+/* Pequeños ajustes mobile */
+@media (max-width: 720px) {
+  .carta-card {
+    padding: 1.7rem;
+  }
+
+  .carta-body {
+    font-size: 1rem;
+  }
+
+  .carta-callout {
+    padding: 1.05rem;
+  }
+}
