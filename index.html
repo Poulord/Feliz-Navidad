@@ -31,7 +31,10 @@
         </label>
         <label>
           Contraseña
-          <input type="password" name="loginPass" placeholder="Contraseña" required>
+          <div class="password-field">
+            <input type="password" name="loginPass" id="login-pass" placeholder="Contraseña" required>
+            <button type="button" class="btn btn-icon" id="toggle-password" aria-label="Mostrar contraseña" aria-pressed="false">👁️</button>
+          </div>
         </label>
         <button type="submit" class="btn btn-primary">Entrar</button>
         <span class="form-message" id="login-message" role="status" aria-live="polite"></span>
